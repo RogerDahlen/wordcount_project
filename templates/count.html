@@ -1,0 +1,12 @@
+<h1> Att räkna ord i en text </h1>
+
+<a href="{% url 'home' %}">Starta om</a>
+
+<h2>Din text = {{ fulltext }}</h2>
+
+<h2>Antel ord = {{ count }}</h2>
+</br>
+{% for word, counttotal in sortedWords %}
+{{ word }} har {{ counttotal }} förekomst(er)
+</br>
+{% endfor %}
